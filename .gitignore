@@ -73,6 +73,7 @@ crashlytics-build.properties
 # uMMORPG
 /Assets/uMMORPG*
 /Assets/TextMesh Pro*
+/Database.sqlite
 
 # Rider
 /.idea
