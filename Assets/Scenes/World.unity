@@ -20448,7 +20448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  _description: 
+  _description: "D\xE9truisez les squelettes"
   spawnPoints:
   - {fileID: 296560878}
   - {fileID: 1981691819}
@@ -20457,6 +20457,7 @@ MonoBehaviour:
   - {fileID: 1014397082}
   goals:
   - {fileID: 595983940}
+  spawnedGameObjects: []
 --- !u!114 &595983942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24665,6 +24666,8 @@ GameObject:
   - component: {fileID: 716703231}
   - component: {fileID: 716703234}
   - component: {fileID: 716703230}
+  - component: {fileID: 716703236}
+  - component: {fileID: 716703235}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -24727,10 +24730,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  _description: 
+  _description: "Les forces du mal attaquent. D\xE9truisez-les !"
   tiers:
   - {fileID: 595983941}
   - {fileID: 1322481809}
+  onStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 716703235}
+        m_TargetAssemblyTypeName: WorldQuest.Involvement, Assembly-CSharp
+        m_MethodName: OnRestart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onEnd:
+    m_PersistentCalls:
+      m_Calls: []
   onTierSetup:
     m_PersistentCalls:
       m_Calls:
@@ -24746,12 +24767,38 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 716703235}
+        m_TargetAssemblyTypeName: WorldQuest.Involvements.DamageDealtInvolvement,
+          Assembly-CSharp
+        m_MethodName: OnTierSetup
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onTierTearDown:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 716703234}
         m_TargetAssemblyTypeName: WorldQuest.Players, Assembly-CSharp
         m_MethodName: TearDownTier
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 716703235}
+        m_TargetAssemblyTypeName: WorldQuest.Involvements.DamageDealtInvolvement,
+          Assembly-CSharp
+        m_MethodName: OnTierTearDown
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24807,6 +24854,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 716703235}
+        m_TargetAssemblyTypeName: WorldQuest.Involvement, Assembly-CSharp
+        m_MethodName: OnPlayerEnter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPlayerLeave:
     m_PersistentCalls:
       m_Calls:
@@ -24822,6 +24881,39 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &716703235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716703228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39945ad7f8224cfaba23c59efe90e3e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  rate: 1
+--- !u!114 &716703236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716703228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3169b7b74fb4d3aba3a20f5cbe3c47d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastSyncTime: 0
+  syncMode: 0
+  syncInterval: 0.1
+  netIdentityCache: {fileID: 0}
+  _involvements: []
+  _players: {fileID: 0}
 --- !u!1 &720289632
 GameObject:
   m_ObjectHideFlags: 0
@@ -27020,7 +27112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 271961969}
   content: {fileID: 1997180410}
-  slotPrefab: {fileID: 114581274115082628, guid: 523341064aa6a4650bc512fe93752b72,
+  slotPrefab: {fileID: 114581274115082628, guid: 0976e24b0d8aea0419cc29fcd174db99,
     type: 3}
   expandPrefix: '[+] '
   hidePrefix: '[-] '
@@ -43493,11 +43585,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  _description: 
+  _description: Attention, il a l'air dangereux..
   spawnPoints:
   - {fileID: 289355463}
   goals:
   - {fileID: 1322481808}
+  spawnedGameObjects: []
 --- !u!114 &1322481810
 MonoBehaviour:
   m_ObjectHideFlags: 0
