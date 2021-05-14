@@ -3,12 +3,6 @@ using UnityEngine;
 
 namespace WorldQuest
 {
-    public struct WorldQuestDescriptor
-    {
-        public string name;
-        public string description;
-    }
-
     public class PlayerWorldQuests : MonoBehaviour
     {
         public List<Manager> managers = new List<Manager>();
