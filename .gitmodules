@@ -1,0 +1,3 @@
+[submodule ".\\Assets\\WorldQuest"]
+	path = .\\Assets\\WorldQuest
+	url = git@github.com:Charlouze-uMMORPG-Addons/World-Quest.git
