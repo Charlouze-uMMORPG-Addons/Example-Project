@@ -13461,7 +13461,6 @@ MonoBehaviour:
   panel: {fileID: 357031791}
   text: {fileID: 36172727}
   rewardButton: {fileID: 1018188463}
-  rewards: {fileID: 0}
 --- !u!114 &357031794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22863,6 +22862,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4f3cd62f16787b4c8c6371cca6538fe, type: 3}
+--- !u!1 &671129164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 671129165}
+  - component: {fileID: 671129166}
+  m_Layer: 0
+  m_Name: rewarder spawn point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &671129165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671129164}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.425737, y: -4.006086, z: 10.507729}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475296009}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &671129166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671129164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc540b373ac74974b67ded5ffe329fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 7060689878510105035, guid: 467eb39d0940082488c8dd795aa62b31, type: 3}
 --- !u!1 &674207683
 GameObject:
   m_ObjectHideFlags: 0
@@ -23612,8 +23655,6 @@ MonoBehaviour:
   onTearDown:
     m_PersistentCalls:
       m_Calls: []
-  goals:
-  - {fileID: 690668125}
   active: 0
 --- !u!114 &690668125
 MonoBehaviour:
@@ -47022,6 +47063,7 @@ GameObject:
   - component: {fileID: 1475296009}
   - component: {fileID: 1475296012}
   - component: {fileID: 1475296010}
+  - component: {fileID: 1475296013}
   - component: {fileID: 1475296011}
   m_Layer: 0
   m_Name: EndTier
@@ -47040,7 +47082,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 671129165}
   m_Father: {fileID: 1611626017}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47065,8 +47108,6 @@ MonoBehaviour:
   onTearDown:
     m_PersistentCalls:
       m_Calls: []
-  goals:
-  - {fileID: 1475296011}
   active: 0
 --- !u!114 &1475296011
 MonoBehaviour:
@@ -47077,12 +47118,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1475296008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e76fec8e36494df1b8e7ff23c5bd5bd1, type: 3}
+  m_Script: {fileID: 11500000, guid: eba19b64728a4bff86f30092e28b5229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  delay: 10
+  delay: 20
+  text: "Thank you for your participation !\r\n\rYou ranked {RANK} with your involment.\r\r\nYou\r
+    have earn {GOLD} gold and {EXP} experience."
+  gold: 1000
+  experience: 100
+  rewarderNpc: {fileID: 0}
 --- !u!114 &1475296012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47100,6 +47146,27 @@ MonoBehaviour:
   visible: 0
   m_AssetId: 
   hasSpawned: 0
+--- !u!114 &1475296013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475296008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ba9b4017d842b2b9a0ca32a5d8ffcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  onSpawn:
+    m_PersistentCalls:
+      m_Calls: []
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  spawnedGameObjects: []
 --- !u!1 &1475725884
 GameObject:
   m_ObjectHideFlags: 0
@@ -67731,6 +67798,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 39509616e6dcda4499fe58ab529bc61d, type: 3}
   - {fileID: 100000, guid: 05682822ff5a34e3f9ee59133371f266, type: 3}
   - {fileID: 1497735241388474, guid: 81a7db5a8758f475aa3c828d589e3127, type: 3}
+  - {fileID: 6947826521525727299, guid: 467eb39d0940082488c8dd795aa62b31, type: 3}
   state: 0
   uiPopup: {fileID: 1165640891}
   serverList:
