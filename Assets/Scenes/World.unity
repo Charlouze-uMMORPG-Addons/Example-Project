@@ -23582,6 +23582,7 @@ GameObject:
   - component: {fileID: 690668127}
   - component: {fileID: 690668126}
   - component: {fileID: 690668124}
+  - component: {fileID: 690668128}
   - component: {fileID: 690668125}
   m_Layer: 0
   m_Name: Tier1
@@ -23605,15 +23606,14 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   _description: "D\xE9truisez les squelettes"
-  spawnPoints:
-  - {fileID: 724159699}
-  - {fileID: 1446115752}
-  - {fileID: 284027977}
-  - {fileID: 631646722}
-  - {fileID: 40729806}
+  onSetup:
+    m_PersistentCalls:
+      m_Calls: []
+  onTearDown:
+    m_PersistentCalls:
+      m_Calls: []
   goals:
   - {fileID: 690668125}
-  spawnedGameObjects: []
   active: 0
 --- !u!114 &690668125
 MonoBehaviour:
@@ -23669,6 +23669,27 @@ Transform:
   m_Father: {fileID: 1611626017}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &690668128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690668123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ba9b4017d842b2b9a0ca32a5d8ffcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  onSpawn:
+    m_PersistentCalls:
+      m_Calls: []
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  spawnedGameObjects: []
 --- !u!1 &697088815
 GameObject:
   m_ObjectHideFlags: 0
@@ -47038,10 +47059,14 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   _description: Congratulations ! You've rid us of this evil !
-  spawnPoints: []
+  onSetup:
+    m_PersistentCalls:
+      m_Calls: []
+  onTearDown:
+    m_PersistentCalls:
+      m_Calls: []
   goals:
   - {fileID: 1475296011}
-  spawnedGameObjects: []
   active: 0
 --- !u!114 &1475296011
 MonoBehaviour:
