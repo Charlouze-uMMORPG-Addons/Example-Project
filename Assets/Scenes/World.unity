@@ -13461,7 +13461,7 @@ MonoBehaviour:
   panel: {fileID: 357031791}
   text: {fileID: 36172727}
   rewardButton: {fileID: 1018188463}
-  rewards: {fileID: 816652528}
+  rewards: {fileID: 0}
 --- !u!114 &357031794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14591,18 +14591,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381323278}
   m_CullTransparentMesh: 0
---- !u!114 &382756705 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6947826521519721565, guid: 467eb39d0940082488c8dd795aa62b31,
-    type: 3}
-  m_PrefabInstance: {fileID: 1182622249}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66a95139274a94348bdabd8bbd5d4f2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &395391838
 GameObject:
   m_ObjectHideFlags: 0
@@ -23626,6 +23614,7 @@ MonoBehaviour:
   goals:
   - {fileID: 690668125}
   spawnedGameObjects: []
+  active: 0
 --- !u!114 &690668125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23678,7 +23667,7 @@ Transform:
   - {fileID: 631646723}
   - {fileID: 40729807}
   m_Father: {fileID: 1611626017}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &697088815
 GameObject:
@@ -27600,273 +27589,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1610938687}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &816652527
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 816652535}
-  - component: {fileID: 816652534}
-  - component: {fileID: 816652533}
-  - component: {fileID: 816652532}
-  - component: {fileID: 816652531}
-  - component: {fileID: 816652530}
-  - component: {fileID: 816652529}
-  - component: {fileID: 816652528}
-  m_Layer: 0
-  m_Name: Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &816652528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816652527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eb44de993ef427a80e7a6af052eb635, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  text: 'Thank you for your participation !
-
-    You ranked {RANK} with your involment.
-
-    You
-    have earn {GOLD} gold and {EXP} experience.'
-  gold: 100
-  experience: 2000
-  rewarder: {fileID: 382756705}
---- !u!114 &816652529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816652527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39945ad7f8224cfaba23c59efe90e3e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  rate: 1
---- !u!114 &816652530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816652527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb146de57fa352941940d83998f6f7eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
---- !u!114 &816652531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816652527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68f2bd44faa48debf1a7c56c92f8467, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  onPlayerEnter:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 816652533}
-        m_TargetAssemblyTypeName: WorldQuest.Manager, Assembly-CSharp
-        m_MethodName: Register
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 816652529}
-        m_TargetAssemblyTypeName: WorldQuest.Involvement, Assembly-CSharp
-        m_MethodName: OnPlayerEnter
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onPlayerLeave:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 816652533}
-        m_TargetAssemblyTypeName: WorldQuest.Manager, Assembly-CSharp
-        m_MethodName: Unregister
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!65 &816652532
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816652527}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 30, y: 10, z: 30}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &816652533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816652527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77e920b5acd4c0c811b757aeb2c3a34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  _description: "Les forces du mal attaquent. D\xE9truisez-les !"
-  tiers:
-  - {fileID: 690668124}
-  - {fileID: 1475296010}
-  onStart:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 816652529}
-        m_TargetAssemblyTypeName: WorldQuest.Involvement, Assembly-CSharp
-        m_MethodName: OnRestart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  onTierSetup:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 816652531}
-        m_TargetAssemblyTypeName: WorldQuest.Players, Assembly-CSharp
-        m_MethodName: SetupTier
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 816652529}
-        m_TargetAssemblyTypeName: WorldQuest.Involvements.DamageDealtInvolvement,
-          Assembly-CSharp
-        m_MethodName: OnTierSetup
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onTierTearDown:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 816652531}
-        m_TargetAssemblyTypeName: WorldQuest.Players, Assembly-CSharp
-        m_MethodName: TearDownTier
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 816652529}
-        m_TargetAssemblyTypeName: WorldQuest.Involvements.DamageDealtInvolvement,
-          Assembly-CSharp
-        m_MethodName: OnTierTearDown
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &816652534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816652527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 2477806162
-  serverOnly: 0
-  visible: 0
-  m_AssetId: 
-  hasSpawned: 0
---- !u!4 &816652535
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816652527}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1611626017}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &818365399 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5075740800715675479, guid: 56c677611910e41a5be0fc2e3ea60804,
@@ -38604,96 +38326,6 @@ Transform:
   m_Father: {fileID: 470925449}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1182622249
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1611626017}
-    m_Modifications:
-    - target: {fileID: 1146015598826771644, guid: 467eb39d0940082488c8dd795aa62b31,
-        type: 3}
-      propertyPath: rewards
-      value: 
-      objectReference: {fileID: 816652528}
-    - target: {fileID: 6947826521525543655, guid: 467eb39d0940082488c8dd795aa62b31,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6947826521525543655, guid: 467eb39d0940082488c8dd795aa62b31,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -12.070159
-      objectReference: {fileID: 0}
-    - target: {fileID: 6947826521525543655, guid: 467eb39d0940082488c8dd795aa62b31,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.95141
-      objectReference: {fileID: 0}
-    - target: {fileID: 6947826521525543655, guid: 467eb39d0940082488c8dd795aa62b31,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.564575
-      objectReference: {fileID: 0}
-    - target: {fileID: 6947826521525543655, guid: 467eb39d0940082488c8dd795aa62b31,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.020180317
-      objectReference: {fileID: 0}
-    - target: {fileID: 6947826521525543655, guid: 467eb39d0940082488c8dd795aa62b31,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6947826521525543655, guid: 467eb39d0940082488c8dd795aa62b31,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.9997964
-      objectReference: {fileID: 0}
-    - target: {fileID: 6947826521525543655, guid: 467eb39d0940082488c8dd795aa62b31,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6947826521525543655, guid: 467eb39d0940082488c8dd795aa62b31,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6947826521525543655, guid: 467eb39d0940082488c8dd795aa62b31,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -182.313
-      objectReference: {fileID: 0}
-    - target: {fileID: 6947826521525543655, guid: 467eb39d0940082488c8dd795aa62b31,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6947826521525727299, guid: 467eb39d0940082488c8dd795aa62b31,
-        type: 3}
-      propertyPath: m_Name
-      value: Rewarder
-      objectReference: {fileID: 0}
-    - target: {fileID: 7060689878510105035, guid: 467eb39d0940082488c8dd795aa62b31,
-        type: 3}
-      propertyPath: sceneId
-      value: 1024284364
-      objectReference: {fileID: 0}
-    - target: {fileID: 7060689878510105035, guid: 467eb39d0940082488c8dd795aa62b31,
-        type: 3}
-      propertyPath: m_AssetId
-      value: 467eb39d0940082488c8dd795aa62b31
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 467eb39d0940082488c8dd795aa62b31, type: 3}
---- !u!4 &1182622250 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6947826521525543655, guid: 467eb39d0940082488c8dd795aa62b31,
-    type: 3}
-  m_PrefabInstance: {fileID: 1182622249}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1182944055
 GameObject:
   m_ObjectHideFlags: 0
@@ -47389,7 +47021,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1611626017}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1475296010
 MonoBehaviour:
@@ -47410,6 +47042,7 @@ MonoBehaviour:
   goals:
   - {fileID: 1475296011}
   spawnedGameObjects: []
+  active: 0
 --- !u!114 &1475296011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47419,13 +47052,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1475296008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eba19b64728a4bff86f30092e28b5229, type: 3}
+  m_Script: {fileID: 11500000, guid: e76fec8e36494df1b8e7ff23c5bd5bd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  delay: 20
-  rewards: {fileID: 816652528}
+  delay: 10
 --- !u!114 &1475296012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53432,6 +53064,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1611626017}
+  - component: {fileID: 1611626025}
+  - component: {fileID: 1611626023}
+  - component: {fileID: 1611626022}
+  - component: {fileID: 1611626021}
+  - component: {fileID: 1611626020}
+  - component: {fileID: 1611626019}
+  - component: {fileID: 1611626018}
   m_Layer: 0
   m_Name: WorldQuest1
   m_TagString: Untagged
@@ -53450,13 +53089,134 @@ Transform:
   m_LocalPosition: {x: 18.65, y: 5.72, z: -3.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 816652535}
-  - {fileID: 1182622250}
   - {fileID: 690668127}
   - {fileID: 1475296009}
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1611626018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611626016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 672e31309a514ddaa9ccc65454dc2166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  _description: Evil is attacking. Please, you have to save us all...
+--- !u!114 &1611626019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611626016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb146de57fa352941940d83998f6f7eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+--- !u!65 &1611626020
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611626016}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30, y: 10, z: 30}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1611626021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611626016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39945ad7f8224cfaba23c59efe90e3e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  rate: 1
+--- !u!114 &1611626022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611626016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6f2d9f1b0540f5be06353260e6d144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  tiers:
+  - {fileID: 690668124}
+  - {fileID: 1475296010}
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  onTierSetup:
+    m_PersistentCalls:
+      m_Calls: []
+  onTierTearDown:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1611626023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611626016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68f2bd44faa48debf1a7c56c92f8467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  onPlayerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerLeave:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1611626025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611626016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2891270829
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1616826125
 GameObject:
   m_ObjectHideFlags: 0
