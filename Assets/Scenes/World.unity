@@ -19978,6 +19978,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a695730e99647f0a10f8c570272e83, type: 3}
+--- !u!4 &592276340 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4251033401467856, guid: 3de469e7c2e411040bcd13970453015c,
+    type: 3}
+  m_PrefabInstance: {fileID: 790914155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &592792708
 GameObject:
   m_ObjectHideFlags: 0
@@ -22939,6 +22945,7 @@ Transform:
   - {fileID: 1119236097}
   - {fileID: 1634675462}
   - {fileID: 1856701930}
+  - {fileID: 592276340}
   m_Father: {fileID: 470925449}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23649,6 +23656,8 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   _description: "D\xE9truisez les squelettes"
+  goals:
+  - {fileID: 690668125}
   onSetup:
     m_PersistentCalls:
       m_Calls: []
@@ -23674,6 +23683,7 @@ MonoBehaviour:
   targetName: bandits
   killTarget: {fileID: 11474358, guid: f4f3cd62f16787b4c8c6371cca6538fe, type: 3}
   killNeeded: 1
+  players: {fileID: 1611626023}
 --- !u!114 &690668126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23724,13 +23734,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  spawnPoints:
+  - {fileID: 724159699}
+  - {fileID: 1446115752}
+  - {fileID: 284027977}
+  - {fileID: 631646722}
+  - {fileID: 40729806}
   onSpawn:
     m_PersistentCalls:
       m_Calls: []
   onDestroy:
     m_PersistentCalls:
       m_Calls: []
-  spawnedGameObjects: []
 --- !u!1 &697088815
 GameObject:
   m_ObjectHideFlags: 0
@@ -26649,6 +26664,71 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1501739157874254130}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &790914155
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 674207684}
+    m_Modifications:
+    - target: {fileID: 1871929584077188, guid: 3de469e7c2e411040bcd13970453015c, type: 3}
+      propertyPath: m_Name
+      value: TerrainVillage (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1871929584077188, guid: 3de469e7c2e411040bcd13970453015c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251033401467856, guid: 3de469e7c2e411040bcd13970453015c, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251033401467856, guid: 3de469e7c2e411040bcd13970453015c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251033401467856, guid: 3de469e7c2e411040bcd13970453015c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251033401467856, guid: 3de469e7c2e411040bcd13970453015c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251033401467856, guid: 3de469e7c2e411040bcd13970453015c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251033401467856, guid: 3de469e7c2e411040bcd13970453015c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251033401467856, guid: 3de469e7c2e411040bcd13970453015c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251033401467856, guid: 3de469e7c2e411040bcd13970453015c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 218158421103308060, guid: 3de469e7c2e411040bcd13970453015c,
+        type: 3}
+      propertyPath: m_ShadowCastingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 218158421103308060, guid: 3de469e7c2e411040bcd13970453015c,
+        type: 3}
+      propertyPath: m_LightmapParameters
+      value: 
+      objectReference: {fileID: 111300000, guid: 90ade8e01ac7ced409c6adf4880a6f32,
+        type: 2}
+    - target: {fileID: 218158421103308060, guid: 3de469e7c2e411040bcd13970453015c,
+        type: 3}
+      propertyPath: m_HeightmapPixelError
+      value: 30
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3de469e7c2e411040bcd13970453015c, type: 3}
 --- !u!1 &791176540
 GameObject:
   m_ObjectHideFlags: 0
@@ -47102,6 +47182,8 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   _description: Congratulations ! You've rid us of this evil !
+  goals:
+  - {fileID: 1475296011}
   onSetup:
     m_PersistentCalls:
       m_Calls: []
@@ -47160,13 +47242,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  spawnPoints:
+  - {fileID: 671129166}
   onSpawn:
     m_PersistentCalls:
       m_Calls: []
   onDestroy:
     m_PersistentCalls:
       m_Calls: []
-  spawnedGameObjects: []
 --- !u!1 &1475725884
 GameObject:
   m_ObjectHideFlags: 0
@@ -53243,6 +53326,8 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   rate: 1
+  spawners:
+  - {fileID: 690668128}
 --- !u!114 &1611626022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53264,12 +53349,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  onTierSetup:
-    m_PersistentCalls:
-      m_Calls: []
-  onTierTearDown:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &1611626023
