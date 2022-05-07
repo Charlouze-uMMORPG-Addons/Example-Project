@@ -54870,6 +54870,8 @@ MonoBehaviour:
   text: "Get the reward \n\nrank: {RANK}\ngold: {GOLD}\nXP: {EXP}"
   gold: 10
   experience: 50
+  _involvements:
+  - {fileID: 1649728345}
   rewarderNpc: {fileID: 0}
 --- !u!1 &1651140513
 GameObject:
